@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "vuepress dev docs --temp .temp",
     "build": "vuepress build docs",
-    "github": "bash deploy_github.sh"
+    "deploy:github": "bash deploy_github.sh"
   },
   "devDependencies": {
     "vuepress": "^1.9.7"
