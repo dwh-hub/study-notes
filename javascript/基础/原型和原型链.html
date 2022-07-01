@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>原型和原型链 | 大花园</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/study-notes/assets/css/0.styles.11ef8602.css" as="style"><link rel="preload" href="/study-notes/assets/js/app.4353e78b.js" as="script"><link rel="preload" href="/study-notes/assets/js/2.0e19be73.js" as="script"><link rel="preload" href="/study-notes/assets/js/13.30b68ea8.js" as="script"><link rel="prefetch" href="/study-notes/assets/js/10.f818c613.js"><link rel="prefetch" href="/study-notes/assets/js/11.966e9fa7.js"><link rel="prefetch" href="/study-notes/assets/js/12.aa9afcf1.js"><link rel="prefetch" href="/study-notes/assets/js/3.f8354c9a.js"><link rel="prefetch" href="/study-notes/assets/js/4.55965fd8.js"><link rel="prefetch" href="/study-notes/assets/js/5.fb90b884.js"><link rel="prefetch" href="/study-notes/assets/js/6.e7e85fbb.js"><link rel="prefetch" href="/study-notes/assets/js/7.a7eeeb2b.js"><link rel="prefetch" href="/study-notes/assets/js/8.cee152ff.js"><link rel="prefetch" href="/study-notes/assets/js/9.c9082c3c.js">
+    <link rel="stylesheet" href="/study-notes/assets/css/0.styles.11ef8602.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/study-notes/" class="home-link router-link-active"><!----> <span class="site-name">大花园</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/study-notes/javascript/" class="nav-link router-link-active">
+  JavaScript
+</a></div><div class="nav-item"><a href="/study-notes/css/" class="nav-link">
+  CSS
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/study-notes/javascript/" class="nav-link router-link-active">
+  JavaScript
+</a></div><div class="nav-item"><a href="/study-notes/css/" class="nav-link">
+  CSS
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>基础</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/study-notes/javascript/基础/原型和原型链.html" class="active sidebar-link">原型和原型链</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study-notes/javascript/基础/原型和原型链.html#引用类型的基本规则" class="sidebar-link">引用类型的基本规则</a></li><li class="sidebar-sub-header"><a href="/study-notes/javascript/基础/原型和原型链.html#构造函数" class="sidebar-link">构造函数</a></li><li class="sidebar-sub-header"><a href="/study-notes/javascript/基础/原型和原型链.html#原型链" class="sidebar-link">原型链</a></li><li class="sidebar-sub-header"><a href="/study-notes/javascript/基础/原型和原型链.html#proto-和prototype的区别" class="sidebar-link">_proto_和prototype的区别</a></li></ul></li><li><a href="/study-notes/javascript/基础/HTTP协议.html" class="sidebar-link">HTTP协议</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="原型和原型链"><a href="#原型和原型链" class="header-anchor">#</a> 原型和原型链</h1> <h2 id="引用类型的基本规则"><a href="#引用类型的基本规则" class="header-anchor">#</a> 引用类型的基本规则</h2> <ol><li>引用类型都具有对象特性，即可自由扩展属性</li> <li>引用类型都有一个隐式类型<code>__proto__</code>属性</li> <li>引用类型的隐式原型<code>__proto__</code>的属性值指向它的构造函数的显式原型<code>prototype</code>属性值</li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+obj<span class="token punctuation">.</span>__proto__ <span class="token operator">==</span> <span class="token class-name">Object</span><span class="token punctuation">.</span>prototype <span class="token comment">// true</span>
+</code></pre></div><ol start="4"><li>当你访问对象的某个属性是，如果这个对象本身没有这个属性，那么它会去它的隐式原型<code>__proto__</code>（也就是它的构造函数的显式原型 <code>prototype</code>）中寻找</li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token string">'1'</span>
+a<span class="token punctuation">.</span>substring
+<span class="token comment">// ƒ substring() { [native code] }</span>
+<span class="token comment">// [native code] 指并非是js代码，由V8引擎返回的</span>
+</code></pre></div><h2 id="构造函数"><a href="#构造函数" class="header-anchor">#</a> 构造函数</h2> <p>在JavaScript中创建对象有两种方式，对象字面量和构造函数，<strong>设计出来用于创建对象的函数，叫做构造函数</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 对象字面量</span>
+<span class="token keyword">let</span> pokemon <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">price</span><span class="token operator">:</span> <span class="token number">298</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 构造函数</span>
+<span class="token keyword">function</span> <span class="token function">Game</span><span class="token punctuation">(</span><span class="token parameter">price</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>price <span class="token operator">=</span> price
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> pokemon <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Game</span><span class="token punctuation">(</span><span class="token number">298</span><span class="token punctuation">)</span>
+</code></pre></div><p>new 操作符在调用构造函数时，发生了什么</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token comment">// 1、创建一个空对象</span>
+obj<span class="token punctuation">.</span>__proto__ <span class="token operator">=</span> <span class="token class-name">Game</span><span class="token punctuation">.</span>prototype <span class="token comment">// 2、设置空对象的隐式原型指向构造函数的原型</span>
+<span class="token function">Game</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token comment">// 3、将构造函数的作用域赋值给新对象（将this指向新对象）</span>
+<span class="token keyword">return</span> obj <span class="token comment">// 4、 返回新的对象</span>
+</code></pre></div><h2 id="原型链"><a href="#原型链" class="header-anchor">#</a> 原型链</h2> <p>以上面的构造函数举例</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">Game</span><span class="token punctuation">(</span><span class="token parameter">price</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>price <span class="token operator">=</span> price
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> pokemon <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Game</span><span class="token punctuation">(</span><span class="token number">298</span><span class="token punctuation">)</span>
+
+pokemon<span class="token punctuation">.</span>toString
+<span class="token comment">// ƒ toString() { [native code] }</span>
+</code></pre></div><p><code>pokemon</code>自身没有<code>toString</code>方法，便去<code>__proto__</code>上找，也就是<code>Game</code>的<code>prototype</code>，但<code>Game</code>的<code>prototype</code>也不存在<code>toString</code>方法，却依然能获取到<code>toString</code>
+这就引出了原型链的概念，构造函数的<code>prototype</code>也是一个对象，那对象的构造函数<code>Object</code>，这样就找到了<code>Object.prototype</code>下的<code>toString</code>方法</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token class-name">Game</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>__proto__ <span class="token operator">===</span> <span class="token class-name">Object</span><span class="token punctuation">.</span>prototype
+</code></pre></div><h2 id="proto-和prototype的区别"><a href="#proto-和prototype的区别" class="header-anchor">#</a> __proto__和prototype的区别</h2> <ol><li><code>_proto_</code>是每个对象都有的一个属性（包括Function），而<code>prototype</code>是函数才有的属性</li> <li>箭头函数没有<code>prototype</code>属性</li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/study-notes/javascript/基础/HTTP协议.html">
+        HTTP协议
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/study-notes/assets/js/app.4353e78b.js" defer></script><script src="/study-notes/assets/js/2.0e19be73.js" defer></script><script src="/study-notes/assets/js/13.30b68ea8.js" defer></script>
+  </body>
+</html>
