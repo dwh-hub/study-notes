@@ -5,6 +5,7 @@ module.exports = [
     children: [
       "/javascript/基础/原型和原型链",
       "/javascript/基础/HTTP协议",
+      "/javascript/基础/apply与call",
     ],
   },
 ];
