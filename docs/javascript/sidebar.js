@@ -9,4 +9,12 @@ module.exports = [
       "/javascript/基础/apply与call",
     ],
   },
+  {
+    title: "vue",
+    collapsable: true,
+    children: [
+      "/javascript/vue/双向绑定2.x版",
+      "/javascript/vue/双向绑定3.x版"
+    ],
+  },
 ];
