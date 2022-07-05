@@ -13,6 +13,7 @@ module.exports = [
     title: "vue",
     collapsable: true,
     children: [
+      "/javascript/vue/基础知识",
       "/javascript/vue/双向绑定2.x版",
       "/javascript/vue/双向绑定3.x版"
     ],
