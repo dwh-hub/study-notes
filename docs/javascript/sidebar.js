@@ -3,6 +3,7 @@ module.exports = [
     title: "基础",
     collapsable: true,
     children: [
+      "/javascript/基础/作用域与作用域链",
       "/javascript/基础/原型和原型链",
       "/javascript/基础/继承",
       "/javascript/基础/HTTP协议",
