@@ -10,6 +10,7 @@ module.exports = [
       "/javascript/基础/HTTP协议",
       "/javascript/基础/apply与call",
       "/javascript/基础/算法",
+      "/javascript/基础/前端路由",
     ],
   },
   {
