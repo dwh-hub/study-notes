@@ -7,6 +7,9 @@ module.exports = [
   {
     title: "构建",
     collapsable: true,
-    children: ["/engineering/构建/webpack工作流"],
+    children: [
+      "/engineering/构建/webpack工作流",
+      "/engineering/构建/vite原理",
+    ],
   },
 ];

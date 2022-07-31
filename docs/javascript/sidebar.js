@@ -14,12 +14,17 @@ module.exports = [
     ],
   },
   {
+    title: "进阶",
+    collapsable: true,
+    children: ["/javascript/进阶/浏览器缓存策略"],
+  },
+  {
     title: "vue",
     collapsable: true,
     children: [
       "/javascript/vue/基础知识",
       "/javascript/vue/双向绑定2.x版",
-      "/javascript/vue/双向绑定3.x版"
+      "/javascript/vue/双向绑定3.x版",
     ],
   },
 ];
