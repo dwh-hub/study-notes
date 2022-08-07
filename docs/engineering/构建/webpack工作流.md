@@ -6,7 +6,7 @@
 2. 可以将按需加载的模块进行分割，等需要的时候再异步加载
 3. webpack被定义为一个模块打包器，而gulp和grunt属于构建工具。
 
-## loder和plugin的区别
+## loader和plugin的区别
 
 - loader也就是加载器。webpack将一切文件视为模块，但是webpack原生只是能解析js文件，有了loader就能把其他所有文件转换成js文件，那么就能通过webpack对所有的文件进行解析。**也就是loader给webpack提供了加载非js文件的能力。**
 - plugin也就是插件。plugin可以扩展webpack的功能。因为在webpack的运行周期中会广播许多的事件，plugin只需要监听这些事件，在合适的时候通过webpack提供的API对ast进行操作，就达到了目的。

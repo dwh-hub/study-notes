@@ -25,6 +25,8 @@ module.exports = [
       "/javascript/vue/基础知识",
       "/javascript/vue/双向绑定2.x版",
       "/javascript/vue/双向绑定3.x版",
+      "/javascript/vue/模板编译",
+      "/javascript/vue/原理浅析",
     ],
   },
 ];
