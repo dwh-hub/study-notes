@@ -7,16 +7,18 @@ module.exports = [
       "/javascript/基础/作用域与作用域链",
       "/javascript/基础/原型和原型链",
       "/javascript/基础/继承",
-      "/javascript/基础/HTTP协议",
       "/javascript/基础/apply与call",
-      "/javascript/基础/算法",
-      "/javascript/基础/前端路由",
+      "/javascript/基础/算法"
     ],
   },
   {
-    title: "进阶",
+    title: "html&浏览器",
     collapsable: true,
-    children: ["/javascript/进阶/浏览器缓存策略"],
+    children: [
+      "/javascript/html&浏览器/HTTP协议",
+      "/javascript/html&浏览器/前端路由",
+      "/javascript/html&浏览器/浏览器缓存策略"
+    ],
   },
   {
     title: "vue",
