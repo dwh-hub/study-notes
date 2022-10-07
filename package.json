@@ -6,7 +6,7 @@
   "author": "dahuayuan",
   "license": "MIT",
   "scripts": {
-    "dev": "vuepress dev docs --temp .temp",
+    "dev": "NODE_OPTIONS='--openssl-legacy-provider' vuepress dev docs --temp .temp",
     "build": "vuepress build docs",
     "deploy:github": "bash deploy_github.sh"
   },
