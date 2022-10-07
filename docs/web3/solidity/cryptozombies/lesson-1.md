@@ -22,8 +22,9 @@ Zombie public zombie;
 let zombies = Array<Zombie>
 let zombie: Zombie
 ```
-2. 函数/变量关键字
+2. 函数/变量修饰符/关键字
     1. `public`：可以供外部、子合约、合约内部访问。
+    1. `external`：只能在合约之外调用 - 它们不能被合约内的其他函数调用。
     2. `private`：只能在合约内部访问。函数/变量名称前面加”_“来标识（和大多数语言一样）。
     3. `internal`：可供外部和子合约调用。（在第二节有体现）
     3. `view`：函数内只读取过solidity内的状态，没有改变过其状态。
@@ -43,6 +44,7 @@ var event = ZombieFactory.NewZombie(function(error, result) {
   generateZombie(result.zombieId, result.name, result.dna)
 })
 ```
+4. `keccak256`：返回一个256位的随机数，支持多个入参。
 
 ## 源码
 

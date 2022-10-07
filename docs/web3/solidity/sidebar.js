@@ -8,6 +8,7 @@ module.exports = [
       "/web3/solidity/cryptozombies/lesson-2",
       "/web3/solidity/cryptozombies/lesson-3",
       "/web3/solidity/cryptozombies/lesson-4",
+      "/web3/solidity/cryptozombies/lesson-5",
     ],
   },
 ];
