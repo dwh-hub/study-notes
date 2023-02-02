@@ -24,6 +24,10 @@ module.exports = [
         text: "solidity",
         link: "/web3/solidity/",
       },
+      {
+        text: "web3js",
+        link: "/web3/web3js/",
+      },
     ],
   },
 ];
