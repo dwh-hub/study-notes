@@ -15,5 +15,5 @@ git add -A
 git commit -m 'deploy'
  
 # 发布到GitHub上
-git push -f https://github.com/dwh-hub/study-notes.git master:gh-pages
+git push -f https://github.com/dwh-hub/study-notes.git main:gh-pages
  
