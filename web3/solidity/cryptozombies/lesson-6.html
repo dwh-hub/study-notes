@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>第六节 应用前端和 Web3.js | 大花园</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/study-notes/assets/css/0.styles.12dc5de2.css" as="style"><link rel="preload" href="/study-notes/assets/js/app.7b4fbc72.js" as="script"><link rel="preload" href="/study-notes/assets/js/2.0746be48.js" as="script"><link rel="preload" href="/study-notes/assets/js/42.eb6ccff3.js" as="script"><link rel="prefetch" href="/study-notes/assets/js/10.cf1260f3.js"><link rel="prefetch" href="/study-notes/assets/js/11.14d23589.js"><link rel="prefetch" href="/study-notes/assets/js/12.089741dd.js"><link rel="prefetch" href="/study-notes/assets/js/13.b87c029b.js"><link rel="prefetch" href="/study-notes/assets/js/14.cb1d9d7c.js"><link rel="prefetch" href="/study-notes/assets/js/15.8a7f170a.js"><link rel="prefetch" href="/study-notes/assets/js/16.fe9a880e.js"><link rel="prefetch" href="/study-notes/assets/js/17.19761737.js"><link rel="prefetch" href="/study-notes/assets/js/18.85b33d8f.js"><link rel="prefetch" href="/study-notes/assets/js/19.76d24227.js"><link rel="prefetch" href="/study-notes/assets/js/20.cb7e7c7a.js"><link rel="prefetch" href="/study-notes/assets/js/21.d3cc0aee.js"><link rel="prefetch" href="/study-notes/assets/js/22.4d96a993.js"><link rel="prefetch" href="/study-notes/assets/js/23.a4f13cac.js"><link rel="prefetch" href="/study-notes/assets/js/24.defe1413.js"><link rel="prefetch" href="/study-notes/assets/js/25.1e903337.js"><link rel="prefetch" href="/study-notes/assets/js/26.a704fb4e.js"><link rel="prefetch" href="/study-notes/assets/js/27.b5d0a005.js"><link rel="prefetch" href="/study-notes/assets/js/28.2d58b1c9.js"><link rel="prefetch" href="/study-notes/assets/js/29.228fb2d9.js"><link rel="prefetch" href="/study-notes/assets/js/3.504895eb.js"><link rel="prefetch" href="/study-notes/assets/js/30.254a29d3.js"><link rel="prefetch" href="/study-notes/assets/js/31.8d0833a0.js"><link rel="prefetch" href="/study-notes/assets/js/32.7f49428c.js"><link rel="prefetch" href="/study-notes/assets/js/33.f48cfc54.js"><link rel="prefetch" href="/study-notes/assets/js/34.69cecbde.js"><link rel="prefetch" href="/study-notes/assets/js/35.1e84124d.js"><link rel="prefetch" href="/study-notes/assets/js/36.c8586d3e.js"><link rel="prefetch" href="/study-notes/assets/js/37.aaf76e29.js"><link rel="prefetch" href="/study-notes/assets/js/38.13e80c5a.js"><link rel="prefetch" href="/study-notes/assets/js/39.7f7a5746.js"><link rel="prefetch" href="/study-notes/assets/js/4.e0b637aa.js"><link rel="prefetch" href="/study-notes/assets/js/40.c5088420.js"><link rel="prefetch" href="/study-notes/assets/js/41.df5674b3.js"><link rel="prefetch" href="/study-notes/assets/js/43.cea03d38.js"><link rel="prefetch" href="/study-notes/assets/js/44.684e7ba8.js"><link rel="prefetch" href="/study-notes/assets/js/5.2e4024d9.js"><link rel="prefetch" href="/study-notes/assets/js/6.40df3bc6.js"><link rel="prefetch" href="/study-notes/assets/js/7.9613116f.js"><link rel="prefetch" href="/study-notes/assets/js/8.87a73965.js"><link rel="prefetch" href="/study-notes/assets/js/9.41a37b4d.js">
+    <link rel="stylesheet" href="/study-notes/assets/css/0.styles.12dc5de2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/study-notes/" class="home-link router-link-active"><!----> <span class="site-name">大花园</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="web2" class="dropdown-title"><span class="title">web2</span> <span class="arrow down"></span></button> <button type="button" aria-label="web2" class="mobile-dropdown-title"><span class="title">web2</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-notes/web2/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/study-notes/web2/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/study-notes/web2/engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/study-notes/web2/design-pattern/" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="web3" class="dropdown-title"><span class="title">web3</span> <span class="arrow down"></span></button> <button type="button" aria-label="web3" class="mobile-dropdown-title"><span class="title">web3</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-notes/web3/solidity/" class="nav-link router-link-active">
+  solidity
+</a></li><li class="dropdown-item"><!----> <a href="/study-notes/web3/web3js/" class="nav-link">
+  web3js
+</a></li></ul></div></div><div class="nav-item"><a href="/study-notes/ai/" class="nav-link">
+  AI
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="web2" class="dropdown-title"><span class="title">web2</span> <span class="arrow down"></span></button> <button type="button" aria-label="web2" class="mobile-dropdown-title"><span class="title">web2</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-notes/web2/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/study-notes/web2/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/study-notes/web2/engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/study-notes/web2/design-pattern/" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="web3" class="dropdown-title"><span class="title">web3</span> <span class="arrow down"></span></button> <button type="button" aria-label="web3" class="mobile-dropdown-title"><span class="title">web3</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-notes/web3/solidity/" class="nav-link router-link-active">
+  solidity
+</a></li><li class="dropdown-item"><!----> <a href="/study-notes/web3/web3js/" class="nav-link">
+  web3js
+</a></li></ul></div></div><div class="nav-item"><a href="/study-notes/ai/" class="nav-link">
+  AI
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>cryptozombies</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/study-notes/web3/solidity/cryptozombies/introduction.html" class="sidebar-link">简介</a></li><li><a href="/study-notes/web3/solidity/cryptozombies/lesson-1.html" class="sidebar-link">第一节 搭建僵尸工厂</a></li><li><a href="/study-notes/web3/solidity/cryptozombies/lesson-2.html" class="sidebar-link">第二节 僵尸攻击人类</a></li><li><a href="/study-notes/web3/solidity/cryptozombies/lesson-3.html" class="sidebar-link">第三节 高级solidity理论</a></li><li><a href="/study-notes/web3/solidity/cryptozombies/lesson-4.html" class="sidebar-link">第四节 僵尸作战系统</a></li><li><a href="/study-notes/web3/solidity/cryptozombies/lesson-5.html" class="sidebar-link">第五节 ERC721 标准和加密收藏品</a></li><li><a href="/study-notes/web3/solidity/cryptozombies/lesson-6.html" aria-current="page" class="active sidebar-link">第六节 应用前端和 Web3.js</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="第六节-应用前端和-web3-js"><a href="#第六节-应用前端和-web3-js" class="header-anchor">#</a> 第六节 应用前端和 Web3.js</h1> <p><a href="/web3/web3js/%E5%89%8D%E7%AB%AF%E4%B8%8E%E5%90%88%E7%BA%A6%E4%BA%A4%E4%BA%92">前端与合约交互</a></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/study-notes/web3/solidity/cryptozombies/lesson-5.html" class="prev">
+        第五节 ERC721 标准和加密收藏品
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/study-notes/assets/js/app.7b4fbc72.js" defer></script><script src="/study-notes/assets/js/2.0746be48.js" defer></script><script src="/study-notes/assets/js/42.eb6ccff3.js" defer></script>
+  </body>
+</html>

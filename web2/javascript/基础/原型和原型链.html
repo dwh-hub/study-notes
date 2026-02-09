@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>原型和原型链 | 大花园</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/study-notes/assets/css/0.styles.12dc5de2.css" as="style"><link rel="preload" href="/study-notes/assets/js/app.7b4fbc72.js" as="script"><link rel="preload" href="/study-notes/assets/js/2.0746be48.js" as="script"><link rel="preload" href="/study-notes/assets/js/32.7f49428c.js" as="script"><link rel="prefetch" href="/study-notes/assets/js/10.cf1260f3.js"><link rel="prefetch" href="/study-notes/assets/js/11.14d23589.js"><link rel="prefetch" href="/study-notes/assets/js/12.089741dd.js"><link rel="prefetch" href="/study-notes/assets/js/13.b87c029b.js"><link rel="prefetch" href="/study-notes/assets/js/14.cb1d9d7c.js"><link rel="prefetch" href="/study-notes/assets/js/15.8a7f170a.js"><link rel="prefetch" href="/study-notes/assets/js/16.fe9a880e.js"><link rel="prefetch" href="/study-notes/assets/js/17.19761737.js"><link rel="prefetch" href="/study-notes/assets/js/18.85b33d8f.js"><link rel="prefetch" href="/study-notes/assets/js/19.76d24227.js"><link rel="prefetch" href="/study-notes/assets/js/20.cb7e7c7a.js"><link rel="prefetch" href="/study-notes/assets/js/21.d3cc0aee.js"><link rel="prefetch" href="/study-notes/assets/js/22.4d96a993.js"><link rel="prefetch" href="/study-notes/assets/js/23.a4f13cac.js"><link rel="prefetch" href="/study-notes/assets/js/24.defe1413.js"><link rel="prefetch" href="/study-notes/assets/js/25.1e903337.js"><link rel="prefetch" href="/study-notes/assets/js/26.a704fb4e.js"><link rel="prefetch" href="/study-notes/assets/js/27.b5d0a005.js"><link rel="prefetch" href="/study-notes/assets/js/28.2d58b1c9.js"><link rel="prefetch" href="/study-notes/assets/js/29.228fb2d9.js"><link rel="prefetch" href="/study-notes/assets/js/3.504895eb.js"><link rel="prefetch" href="/study-notes/assets/js/30.254a29d3.js"><link rel="prefetch" href="/study-notes/assets/js/31.8d0833a0.js"><link rel="prefetch" href="/study-notes/assets/js/33.f48cfc54.js"><link rel="prefetch" href="/study-notes/assets/js/34.69cecbde.js"><link rel="prefetch" href="/study-notes/assets/js/35.1e84124d.js"><link rel="prefetch" href="/study-notes/assets/js/36.c8586d3e.js"><link rel="prefetch" href="/study-notes/assets/js/37.aaf76e29.js"><link rel="prefetch" href="/study-notes/assets/js/38.13e80c5a.js"><link rel="prefetch" href="/study-notes/assets/js/39.7f7a5746.js"><link rel="prefetch" href="/study-notes/assets/js/4.e0b637aa.js"><link rel="prefetch" href="/study-notes/assets/js/40.c5088420.js"><link rel="prefetch" href="/study-notes/assets/js/41.df5674b3.js"><link rel="prefetch" href="/study-notes/assets/js/42.eb6ccff3.js"><link rel="prefetch" href="/study-notes/assets/js/43.cea03d38.js"><link rel="prefetch" href="/study-notes/assets/js/44.684e7ba8.js"><link rel="prefetch" href="/study-notes/assets/js/5.2e4024d9.js"><link rel="prefetch" href="/study-notes/assets/js/6.40df3bc6.js"><link rel="prefetch" href="/study-notes/assets/js/7.9613116f.js"><link rel="prefetch" href="/study-notes/assets/js/8.87a73965.js"><link rel="prefetch" href="/study-notes/assets/js/9.41a37b4d.js">
+    <link rel="stylesheet" href="/study-notes/assets/css/0.styles.12dc5de2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/study-notes/" class="home-link router-link-active"><!----> <span class="site-name">大花园</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="web2" class="dropdown-title"><span class="title">web2</span> <span class="arrow down"></span></button> <button type="button" aria-label="web2" class="mobile-dropdown-title"><span class="title">web2</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-notes/web2/javascript/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/study-notes/web2/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/study-notes/web2/engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/study-notes/web2/design-pattern/" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="web3" class="dropdown-title"><span class="title">web3</span> <span class="arrow down"></span></button> <button type="button" aria-label="web3" class="mobile-dropdown-title"><span class="title">web3</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-notes/web3/solidity/" class="nav-link">
+  solidity
+</a></li><li class="dropdown-item"><!----> <a href="/study-notes/web3/web3js/" class="nav-link">
+  web3js
+</a></li></ul></div></div><div class="nav-item"><a href="/study-notes/ai/" class="nav-link">
+  AI
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="web2" class="dropdown-title"><span class="title">web2</span> <span class="arrow down"></span></button> <button type="button" aria-label="web2" class="mobile-dropdown-title"><span class="title">web2</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-notes/web2/javascript/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/study-notes/web2/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/study-notes/web2/engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/study-notes/web2/design-pattern/" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="web3" class="dropdown-title"><span class="title">web3</span> <span class="arrow down"></span></button> <button type="button" aria-label="web3" class="mobile-dropdown-title"><span class="title">web3</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-notes/web3/solidity/" class="nav-link">
+  solidity
+</a></li><li class="dropdown-item"><!----> <a href="/study-notes/web3/web3js/" class="nav-link">
+  web3js
+</a></li></ul></div></div><div class="nav-item"><a href="/study-notes/ai/" class="nav-link">
+  AI
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/study-notes/web2/javascript/基础/一句话知识.html" class="sidebar-link">一句话知识</a></li><li><a href="/study-notes/web2/javascript/基础/作用域与作用域链.html" class="sidebar-link">作用域与作用域链</a></li><li><a href="/study-notes/web2/javascript/基础/原型和原型链.html" class="active sidebar-link">原型和原型链</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study-notes/web2/javascript/基础/原型和原型链.html#引用类型的基本规则" class="sidebar-link">引用类型的基本规则</a></li><li class="sidebar-sub-header"><a href="/study-notes/web2/javascript/基础/原型和原型链.html#构造函数" class="sidebar-link">构造函数</a></li><li class="sidebar-sub-header"><a href="/study-notes/web2/javascript/基础/原型和原型链.html#原型链" class="sidebar-link">原型链</a></li><li class="sidebar-sub-header"><a href="/study-notes/web2/javascript/基础/原型和原型链.html#proto-和prototype的区别" class="sidebar-link">_proto_和prototype的区别</a></li></ul></li><li><a href="/study-notes/web2/javascript/基础/继承.html" class="sidebar-link">继承的方式</a></li><li><a href="/study-notes/web2/javascript/基础/apply与call.html" class="sidebar-link">apply与call</a></li><li><a href="/study-notes/web2/javascript/基础/算法.html" class="sidebar-link">基础算法</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>html&amp;浏览器</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/study-notes/web2/javascript/html&amp;浏览器/HTTP协议.html" class="sidebar-link">HTTP协议</a></li><li><a href="/study-notes/web2/javascript/html&amp;浏览器/前端路由.html" class="sidebar-link">前端路由</a></li><li><a href="/study-notes/web2/javascript/html&amp;浏览器/浏览器缓存策略.html" class="sidebar-link">浏览器缓存策略</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>vue</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/study-notes/web2/javascript/vue/基础知识.html" class="sidebar-link">基础知识</a></li><li><a href="/study-notes/web2/javascript/vue/双向绑定2.x版.html" class="sidebar-link">双向绑定2.x版</a></li><li><a href="/study-notes/web2/javascript/vue/双向绑定3.x版.html" class="sidebar-link">双向绑定2&amp;3差异</a></li><li><a href="/study-notes/web2/javascript/vue/模板编译.html" class="sidebar-link">模板编译</a></li><li><a href="/study-notes/web2/javascript/vue/原理浅析.html" class="sidebar-link">原理浅析</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="原型和原型链"><a href="#原型和原型链" class="header-anchor">#</a> 原型和原型链</h1> <h2 id="引用类型的基本规则"><a href="#引用类型的基本规则" class="header-anchor">#</a> 引用类型的基本规则</h2> <ol><li>引用类型都具有对象特性，即可自由扩展属性</li> <li>引用类型都有一个隐式类型<code>__proto__</code>属性</li> <li>引用类型的隐式原型<code>__proto__</code>的属性值指向它的构造函数的显式原型<code>prototype</code>属性值</li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+obj<span class="token punctuation">.</span>__proto__ <span class="token operator">==</span> <span class="token class-name">Object</span><span class="token punctuation">.</span>prototype <span class="token comment">// true</span>
+</code></pre></div><ol start="4"><li>当你访问对象的某个属性是，如果这个对象本身没有这个属性，那么它会去它的隐式原型<code>__proto__</code>（也就是它的构造函数的显式原型 <code>prototype</code>）中寻找</li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token string">'1'</span>
+a<span class="token punctuation">.</span>substring
+<span class="token comment">// ƒ substring() { [native code] }</span>
+<span class="token comment">// [native code] 指并非是js代码，由V8引擎返回的</span>
+</code></pre></div><h2 id="构造函数"><a href="#构造函数" class="header-anchor">#</a> 构造函数</h2> <p>在JavaScript中创建对象有两种方式，对象字面量和构造函数，<strong>设计出来用于创建对象的函数，叫做构造函数</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 对象字面量</span>
+<span class="token keyword">let</span> pokemon <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">price</span><span class="token operator">:</span> <span class="token number">298</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 构造函数</span>
+<span class="token keyword">function</span> <span class="token function">Game</span><span class="token punctuation">(</span><span class="token parameter">price</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>price <span class="token operator">=</span> price
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> pokemon <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Game</span><span class="token punctuation">(</span><span class="token number">298</span><span class="token punctuation">)</span>
+</code></pre></div><p>new 操作符在调用构造函数时，发生了什么</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token comment">// 1、创建一个空对象</span>
+obj<span class="token punctuation">.</span>__proto__ <span class="token operator">=</span> <span class="token class-name">Game</span><span class="token punctuation">.</span>prototype <span class="token comment">// 2、设置空对象的隐式原型指向构造函数的原型</span>
+<span class="token function">Game</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token comment">// 3、将构造函数的作用域赋值给新对象（将this指向新对象）</span>
+<span class="token keyword">return</span> obj <span class="token comment">// 4、 返回新的对象</span>
+</code></pre></div><h2 id="原型链"><a href="#原型链" class="header-anchor">#</a> 原型链</h2> <p>以上面的构造函数举例</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">Game</span><span class="token punctuation">(</span><span class="token parameter">price</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>price <span class="token operator">=</span> price
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> pokemon <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Game</span><span class="token punctuation">(</span><span class="token number">298</span><span class="token punctuation">)</span>
+
+pokemon<span class="token punctuation">.</span>toString
+<span class="token comment">// ƒ toString() { [native code] }</span>
+</code></pre></div><p><code>pokemon</code>自身没有<code>toString</code>方法，便去<code>__proto__</code>上找，也就是<code>Game</code>的<code>prototype</code>，但<code>Game</code>的<code>prototype</code>也不存在<code>toString</code>方法，却依然能获取到<code>toString</code>
+这就引出了原型链的概念，构造函数的<code>prototype</code>也是一个对象，那对象的构造函数<code>Object</code>，这样就找到了<code>Object.prototype</code>下的<code>toString</code>方法</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token class-name">Game</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>__proto__ <span class="token operator">===</span> <span class="token class-name">Object</span><span class="token punctuation">.</span>prototype
+</code></pre></div><h2 id="proto-和prototype的区别"><a href="#proto-和prototype的区别" class="header-anchor">#</a> __proto__和prototype的区别</h2> <ol><li><code>_proto_</code>是每个对象都有的一个属性（包括Function），而<code>prototype</code>是函数才有的属性</li> <li>箭头函数没有<code>prototype</code>属性</li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/study-notes/web2/javascript/基础/作用域与作用域链.html" class="prev">
+        作用域与作用域链
+      </a></span> <span class="next"><a href="/study-notes/web2/javascript/基础/继承.html">
+        继承的方式
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/study-notes/assets/js/app.7b4fbc72.js" defer></script><script src="/study-notes/assets/js/2.0746be48.js" defer></script><script src="/study-notes/assets/js/32.7f49428c.js" defer></script>
+  </body>
+</html>

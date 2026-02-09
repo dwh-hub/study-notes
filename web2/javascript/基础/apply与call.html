@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>apply与call | 大花园</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/study-notes/assets/css/0.styles.12dc5de2.css" as="style"><link rel="preload" href="/study-notes/assets/js/app.7b4fbc72.js" as="script"><link rel="preload" href="/study-notes/assets/js/2.0746be48.js" as="script"><link rel="preload" href="/study-notes/assets/js/29.228fb2d9.js" as="script"><link rel="prefetch" href="/study-notes/assets/js/10.cf1260f3.js"><link rel="prefetch" href="/study-notes/assets/js/11.14d23589.js"><link rel="prefetch" href="/study-notes/assets/js/12.089741dd.js"><link rel="prefetch" href="/study-notes/assets/js/13.b87c029b.js"><link rel="prefetch" href="/study-notes/assets/js/14.cb1d9d7c.js"><link rel="prefetch" href="/study-notes/assets/js/15.8a7f170a.js"><link rel="prefetch" href="/study-notes/assets/js/16.fe9a880e.js"><link rel="prefetch" href="/study-notes/assets/js/17.19761737.js"><link rel="prefetch" href="/study-notes/assets/js/18.85b33d8f.js"><link rel="prefetch" href="/study-notes/assets/js/19.76d24227.js"><link rel="prefetch" href="/study-notes/assets/js/20.cb7e7c7a.js"><link rel="prefetch" href="/study-notes/assets/js/21.d3cc0aee.js"><link rel="prefetch" href="/study-notes/assets/js/22.4d96a993.js"><link rel="prefetch" href="/study-notes/assets/js/23.a4f13cac.js"><link rel="prefetch" href="/study-notes/assets/js/24.defe1413.js"><link rel="prefetch" href="/study-notes/assets/js/25.1e903337.js"><link rel="prefetch" href="/study-notes/assets/js/26.a704fb4e.js"><link rel="prefetch" href="/study-notes/assets/js/27.b5d0a005.js"><link rel="prefetch" href="/study-notes/assets/js/28.2d58b1c9.js"><link rel="prefetch" href="/study-notes/assets/js/3.504895eb.js"><link rel="prefetch" href="/study-notes/assets/js/30.254a29d3.js"><link rel="prefetch" href="/study-notes/assets/js/31.8d0833a0.js"><link rel="prefetch" href="/study-notes/assets/js/32.7f49428c.js"><link rel="prefetch" href="/study-notes/assets/js/33.f48cfc54.js"><link rel="prefetch" href="/study-notes/assets/js/34.69cecbde.js"><link rel="prefetch" href="/study-notes/assets/js/35.1e84124d.js"><link rel="prefetch" href="/study-notes/assets/js/36.c8586d3e.js"><link rel="prefetch" href="/study-notes/assets/js/37.aaf76e29.js"><link rel="prefetch" href="/study-notes/assets/js/38.13e80c5a.js"><link rel="prefetch" href="/study-notes/assets/js/39.7f7a5746.js"><link rel="prefetch" href="/study-notes/assets/js/4.e0b637aa.js"><link rel="prefetch" href="/study-notes/assets/js/40.c5088420.js"><link rel="prefetch" href="/study-notes/assets/js/41.df5674b3.js"><link rel="prefetch" href="/study-notes/assets/js/42.eb6ccff3.js"><link rel="prefetch" href="/study-notes/assets/js/43.cea03d38.js"><link rel="prefetch" href="/study-notes/assets/js/44.684e7ba8.js"><link rel="prefetch" href="/study-notes/assets/js/5.2e4024d9.js"><link rel="prefetch" href="/study-notes/assets/js/6.40df3bc6.js"><link rel="prefetch" href="/study-notes/assets/js/7.9613116f.js"><link rel="prefetch" href="/study-notes/assets/js/8.87a73965.js"><link rel="prefetch" href="/study-notes/assets/js/9.41a37b4d.js">
+    <link rel="stylesheet" href="/study-notes/assets/css/0.styles.12dc5de2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/study-notes/" class="home-link router-link-active"><!----> <span class="site-name">大花园</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="web2" class="dropdown-title"><span class="title">web2</span> <span class="arrow down"></span></button> <button type="button" aria-label="web2" class="mobile-dropdown-title"><span class="title">web2</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-notes/web2/javascript/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/study-notes/web2/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/study-notes/web2/engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/study-notes/web2/design-pattern/" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="web3" class="dropdown-title"><span class="title">web3</span> <span class="arrow down"></span></button> <button type="button" aria-label="web3" class="mobile-dropdown-title"><span class="title">web3</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-notes/web3/solidity/" class="nav-link">
+  solidity
+</a></li><li class="dropdown-item"><!----> <a href="/study-notes/web3/web3js/" class="nav-link">
+  web3js
+</a></li></ul></div></div><div class="nav-item"><a href="/study-notes/ai/" class="nav-link">
+  AI
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="web2" class="dropdown-title"><span class="title">web2</span> <span class="arrow down"></span></button> <button type="button" aria-label="web2" class="mobile-dropdown-title"><span class="title">web2</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-notes/web2/javascript/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/study-notes/web2/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/study-notes/web2/engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/study-notes/web2/design-pattern/" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="web3" class="dropdown-title"><span class="title">web3</span> <span class="arrow down"></span></button> <button type="button" aria-label="web3" class="mobile-dropdown-title"><span class="title">web3</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study-notes/web3/solidity/" class="nav-link">
+  solidity
+</a></li><li class="dropdown-item"><!----> <a href="/study-notes/web3/web3js/" class="nav-link">
+  web3js
+</a></li></ul></div></div><div class="nav-item"><a href="/study-notes/ai/" class="nav-link">
+  AI
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/study-notes/web2/javascript/基础/一句话知识.html" class="sidebar-link">一句话知识</a></li><li><a href="/study-notes/web2/javascript/基础/作用域与作用域链.html" class="sidebar-link">作用域与作用域链</a></li><li><a href="/study-notes/web2/javascript/基础/原型和原型链.html" class="sidebar-link">原型和原型链</a></li><li><a href="/study-notes/web2/javascript/基础/继承.html" class="sidebar-link">继承的方式</a></li><li><a href="/study-notes/web2/javascript/基础/apply与call.html" class="active sidebar-link">apply与call</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study-notes/web2/javascript/基础/apply与call.html#共同点" class="sidebar-link">共同点</a></li><li class="sidebar-sub-header"><a href="/study-notes/web2/javascript/基础/apply与call.html#区别" class="sidebar-link">区别</a></li><li class="sidebar-sub-header"><a href="/study-notes/web2/javascript/基础/apply与call.html#用法" class="sidebar-link">用法</a></li><li class="sidebar-sub-header"><a href="/study-notes/web2/javascript/基础/apply与call.html#实现" class="sidebar-link">实现</a></li></ul></li><li><a href="/study-notes/web2/javascript/基础/算法.html" class="sidebar-link">基础算法</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>html&amp;浏览器</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/study-notes/web2/javascript/html&amp;浏览器/HTTP协议.html" class="sidebar-link">HTTP协议</a></li><li><a href="/study-notes/web2/javascript/html&amp;浏览器/前端路由.html" class="sidebar-link">前端路由</a></li><li><a href="/study-notes/web2/javascript/html&amp;浏览器/浏览器缓存策略.html" class="sidebar-link">浏览器缓存策略</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>vue</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/study-notes/web2/javascript/vue/基础知识.html" class="sidebar-link">基础知识</a></li><li><a href="/study-notes/web2/javascript/vue/双向绑定2.x版.html" class="sidebar-link">双向绑定2.x版</a></li><li><a href="/study-notes/web2/javascript/vue/双向绑定3.x版.html" class="sidebar-link">双向绑定2&amp;3差异</a></li><li><a href="/study-notes/web2/javascript/vue/模板编译.html" class="sidebar-link">模板编译</a></li><li><a href="/study-notes/web2/javascript/vue/原理浅析.html" class="sidebar-link">原理浅析</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="apply与call"><a href="#apply与call" class="header-anchor">#</a> apply与call</h1> <blockquote><p>参考链接：<br>
+call: <em>https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call</em><br>
+apply: <em>https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply</em></p></blockquote> <h2 id="共同点"><a href="#共同点" class="header-anchor">#</a> 共同点</h2> <p>他们的共同点是，都能够<strong>改变函数执行时的上下文（也就是函数内部的this指向）</strong>，将一个对象的方法交给另一个对象来执行，并且是立即执行的。<br> <strong>调用 call 和 apply 的对象，必须是一个函数 Function</strong>。</p> <blockquote><p>A 对象有一个方法，而 B 对象因为某种原因，也需要用到同样的方法，那么这时候我们是单独为 B 对象扩展一个方法呢，还是借用一下 A 对象的方法呢？当然是借用 A 对象的啦，既完成了需求，又减少了内存的占用。</p></blockquote> <h2 id="区别"><a href="#区别" class="header-anchor">#</a> 区别</h2> <p>它们的区别，主要体现在参数的写法上。</p> <h3 id="call-的写法"><a href="#call-的写法" class="header-anchor">#</a> call 的写法</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">Function</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>thisArg<span class="token punctuation">,</span> arg1<span class="token punctuation">,</span> arg2<span class="token punctuation">,</span> <span class="token operator">...</span><span class="token punctuation">)</span>
+
+</code></pre></div><p><strong>参数：</strong></p> <ul><li>thisArg：可选的，在 function 函数运行时使用的 this 值，若不传或为<code>null/undefined</code>时，自动替换成指向全局对象 window</li> <li>arg1, arg2, ...：任意个参数，每个参数会映射到相应位置的<code>Function</code>的参数上。</li></ul> <h3 id="apply-的写法"><a href="#apply-的写法" class="header-anchor">#</a> apply 的写法</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">Function</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>thisArg<span class="token punctuation">,</span> argsArray<span class="token punctuation">)</span>
+
+</code></pre></div><p><strong>参数：</strong></p> <ul><li>thisArg：与<code>call</code>一致</li> <li>argsArray：一个数组或者类数组对象</li></ul> <p><strong>什么是类数组？</strong></p> <p>就是<strong>具备与数组特征类似的对象</strong><br>
+类数组 arrayLike 可以通过角标进行调用，具有length属性，同时也可以通过 for 循环进行遍历。如下：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> arrayLike <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token number">0</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token number">1</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token number">2</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">3</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><p><strong>类数组无法使用 forEach、splice、push 等数组原型链上的方法</strong></p> <h2 id="用法"><a href="#用法" class="header-anchor">#</a> 用法</h2> <h3 id="call"><a href="#call" class="header-anchor">#</a> call</h3> <ol><li><strong>对象的继承</strong></li></ol> <div class="language-js extra-class"><pre class="language-js"><code>
+<span class="token keyword">function</span> <span class="token function">Game</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> price</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>price <span class="token operator">=</span> name<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">Pokemon</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> price<span class="token punctuation">,</span> edition</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 通过call方法继承Game的变量和方法</span>
+  <span class="token function">Game</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> name<span class="token punctuation">,</span> price<span class="token punctuation">)</span>
+  <span class="token comment">// 扩展其他方法</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>edition <span class="token operator">=</span> edition
+
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> pokemon9 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Pokemon</span><span class="token punctuation">(</span><span class="token string">'宝可梦'</span><span class="token punctuation">,</span> <span class="token number">298</span><span class="token punctuation">,</span> <span class="token string">'朱紫'</span><span class="token punctuation">)</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>pokemon9<span class="token punctuation">.</span>name<span class="token punctuation">)</span> <span class="token comment">// 宝可梦</span>
+</code></pre></div><ol start="2"><li><strong>借用方法</strong>，比如上面的类数组要使用数组专属的方法</li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 1. 赋值给新对象</span>
+<span class="token keyword">let</span> array <span class="token operator">=</span> <span class="token class-name">Array</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>arrayLike<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>array<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// [2, 3]</span>
+
+<span class="token comment">// 2. 直接调用</span>
+<span class="token class-name">Array</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>arrayLike<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>array<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// [2, 3]</span>
+
+</code></pre></div><h3 id="apply"><a href="#apply" class="header-anchor">#</a> apply</h3> <p>与call用法大致相同</p> <p>例子：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> max <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> numbers<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>max<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 7</span>
+
+<span class="token keyword">const</span> min <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">min</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> numbers<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>min<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 2</span>
+
+<span class="token comment">// 注：感觉不如扩展运算符……方便</span>
+
+</code></pre></div><h2 id="实现"><a href="#实现" class="header-anchor">#</a> 实现</h2> <h3 id="实现call"><a href="#实现call" class="header-anchor">#</a> 实现call</h3> <p>目标</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> Game <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'gameName'</span><span class="token punctuation">,</span>
+  <span class="token function">say</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">游戏名：</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> Pokemon <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'宝可梦'</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 原生效果 - Pokemon 借用 Game的say方法</span>
+Game<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>Pokemon<span class="token punctuation">)</span> <span class="token comment">// 游戏名：宝可梦</span>
+
+</code></pre></div><p>实现</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">myCall</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">thisArg</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 1.调用对象需要是函数</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> <span class="token keyword">this</span> <span class="token operator">!==</span> <span class="token string">'function'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">TypeError</span><span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">+</span> <span class="token string">' is not a function'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 2. 没传参数时，指向全局 window</span>
+  thisArg <span class="token operator">=</span> thisArg <span class="token operator">||</span> window
+
+  <span class="token comment">// 3. 给方法名设置一个唯一值，防止和thisArg上的方法名重复导致原方法被覆盖</span>
+  <span class="token keyword">let</span> fn <span class="token operator">=</span> <span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+  <span class="token comment">// 4. 给thisArg添加这个方法，指向this</span>
+  thisArg<span class="token punctuation">[</span>fn<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">this</span> 
+
+  <span class="token comment">// 5. 处理参数，去除第一个参数thisArg, 其他传入fn函数</span>
+  <span class="token keyword">let</span> args <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span>arguments<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+  <span class="token comment">// 6. 执行该方法</span>
+  thisArg<span class="token punctuation">[</span>fn<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span>
+
+  <span class="token comment">// 7. 执行完成后删除该方法</span>
+  <span class="token keyword">delete</span> thisArg<span class="token punctuation">[</span>fn<span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 实现效果</span>
+Game<span class="token punctuation">.</span>say<span class="token punctuation">.</span><span class="token function">myCall</span><span class="token punctuation">(</span>Pokemon<span class="token punctuation">)</span> <span class="token comment">// 游戏名：宝可梦</span>
+
+</code></pre></div><h3 id="实现apply"><a href="#实现apply" class="header-anchor">#</a> 实现apply</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">myApply</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">thisArg</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> <span class="token keyword">this</span> <span class="token operator">!==</span> <span class="token string">'function'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">TypeError</span><span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">+</span> <span class="token string">' is not a function'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  thisArg <span class="token operator">=</span> thisArg <span class="token operator">||</span> window
+  <span class="token keyword">let</span> fn <span class="token operator">=</span> <span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  thisArg<span class="token punctuation">[</span>fn<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">this</span>
+  <span class="token keyword">let</span> arg <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span>arguments<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+  <span class="token comment">// 与call的差别就是，arg只会有一个参数，并且类型是数组/类数组</span>
+  thisArg<span class="token punctuation">[</span>fn<span class="token punctuation">]</span><span class="token punctuation">(</span>arg<span class="token punctuation">)</span>
+  <span class="token keyword">delete</span> thisArg<span class="token punctuation">[</span>fn<span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/study-notes/web2/javascript/基础/继承.html" class="prev">
+        继承的方式
+      </a></span> <span class="next"><a href="/study-notes/web2/javascript/基础/算法.html">
+        基础算法
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/study-notes/assets/js/app.7b4fbc72.js" defer></script><script src="/study-notes/assets/js/2.0746be48.js" defer></script><script src="/study-notes/assets/js/29.228fb2d9.js" defer></script>
+  </body>
+</html>
