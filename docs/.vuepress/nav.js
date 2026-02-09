@@ -35,6 +35,6 @@ module.exports = [
   },
   {
     text: "AI",
-    items: [],
+    link: "/ai/",
   },
 ];

@@ -5,4 +5,5 @@ module.exports = {
   "/web2/design-pattern/": require("../web2/design-pattern/sidebar"),
   "/web3/solidity/": require("../web3/solidity/sidebar"),
   "/web3/web3js/": require("../web3/web3js/sidebar"),
+  "/ai/": require("../ai/sidebar"),
 };
