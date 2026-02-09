@@ -4,21 +4,24 @@ module.exports = [
     items: [
       {
         text: "JavaScript",
-        link: "/javascript/",
+        link: "/web2/javascript/",
       },
       {
         text: "CSS",
-        link: "/css/",
+        link: "/web2/css/",
       },
       {
         text: "工程化",
-        link: "/engineering/",
+        link: "/web2/engineering/",
+      },
+      {
+        text: "设计模式",
+        link: "/web2/design-pattern/",
       },
     ],
   },
-  { text: "设计模式", link: "/design-pattern/" },
   {
-    text: "web3学习",
+    text: "web3",
     items: [
       {
         text: "solidity",
@@ -29,5 +32,9 @@ module.exports = [
         link: "/web3/web3js/",
       },
     ],
+  },
+  {
+    text: "AI",
+    items: [],
   },
 ];

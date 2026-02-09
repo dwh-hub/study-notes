@@ -1,7 +1,7 @@
 module.exports = [
   {
     title: "cryptozombies",
-    collapsable: true,
+    collapsable: false,
     children: [
       "/web3/solidity/cryptozombies/introduction",
       "/web3/solidity/cryptozombies/lesson-1",
