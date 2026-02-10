@@ -31,4 +31,15 @@ module.exports = [
       "/web2/javascript/vue/原理浅析",
     ],
   },
+  {
+    title: "应用",
+    collapsable: false,
+    children: [
+      "/web2/javascript/应用/大文件上传",
+      "/web2/javascript/应用/虚拟列表",
+      "/web2/javascript/应用/接口封装",
+      "/web2/javascript/应用/通用组件设计",
+      "/web2/javascript/应用/菜单权限",
+    ],
+  },
 ];
